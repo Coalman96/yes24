@@ -6,6 +6,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
 }
 
 li {
@@ -28,6 +32,24 @@ a {
 .swiper {
   width: 100%;
   height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-user-drag: none;
 }
 
 #sec1Swiper {
@@ -128,23 +150,255 @@ a {
   background: #007aff;
 }
 
-.swiper-slide {
+#sect2,
+#sect3 {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+#sect2 .contentsWrap,
+#sect3 .contentsWrap {
+  display: none;
+  padding-top: 50px;
+}
+#sect2 .contentsWrap.on,
+#sect3 .contentsWrap.on {
+  display: flex;
+}
+#sect2 b,
+#sect3 b {
+  line-height: 16px;
+  font-size: 15px;
+  color: #333;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#sect2 p,
+#sect3 p {
+  font-size: 13px;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#sect2 a,
+#sect3 a {
+  display: block;
+}
+#sect2 h2,
+#sect3 h2 {
+  font-size: 35px;
+  color: #333;
+  text-align: center;
+  font-weight: 700;
+  height: 155px;
+  line-height: 155px;
+}
+#sect2 .tabs,
+#sect3 .tabs {
   text-align: center;
   font-size: 18px;
-  background: #fff;
-  border: 1px solid #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+}
+#sect2 .tabs li,
+#sect3 .tabs li {
+  flex: 1;
+}
+#sect2 .moreBtn,
+#sect3 .moreBtn {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#sect2 .moreBtn a,
+#sect3 .moreBtn a {
+  display: block;
+  width: 220px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  color: #000;
 }
 
-.swiper-slide img {
+#sect2 {
+  height: 800px;
+}
+#sect2 .contentsWrap {
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+}
+#sect2 .contentsWrap li:hover .rankThumBg {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+#sect2 .contentsWrap li a {
+  width: 380px;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+#sect2 .contentsWrap li a .rankThum {
+  overflow: hidden;
+  position: relative;
+  height: 330px;
+}
+#sect2 .contentsWrap li a .rankThum .rankThumBg {
+  height: 100%;
+  transition: 0.5s;
+  filter: blur(3px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sect2 .contentsWrap li a .rankThum figure {
   display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 280px;
+}
+#sect2 .contentsWrap li a .rankThum figure img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-user-drag: none;
+  filter: none;
+}
+#sect2 .contentsWrap li a .rankDesc {
+  text-align: center;
+  width: 100%;
+  height: 90px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#sect2 .contentsWrap li a .rankNum {
+  position: absolute;
+  bottom: 80px;
+  left: 15px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background: #ec7d2c;
+}
+#sect2 .contentsWrap:nth-child(1) li:nth-child(1) .rankThumBg {
+  background-image: url(./images/rank1-1.jpg);
+}
+#sect2 .contentsWrap:nth-child(1) li:nth-child(2) .rankThumBg {
+  background-image: url(./images/rank1-2.jpg);
+}
+#sect2 .contentsWrap:nth-child(1) li:nth-child(3) .rankThumBg {
+  background-image: url(./images/rank1-3.jpg);
+}
+#sect2 .contentsWrap:nth-child(2) li:nth-child(1) .rankThumBg {
+  background-image: url(./images/rank2-1.jpg);
+}
+#sect2 .contentsWrap:nth-child(2) li:nth-child(2) .rankThumBg {
+  background-image: url(./images/rank2-2.jpg);
+}
+#sect2 .contentsWrap:nth-child(2) li:nth-child(3) .rankThumBg {
+  background-image: url(./images/rank2-3.jpg);
+}
+#sect2 .contentsWrap:nth-child(3) li:nth-child(1) .rankThumBg {
+  background-image: url(./images/rank3-1.jpg);
+}
+#sect2 .contentsWrap:nth-child(3) li:nth-child(2) .rankThumBg {
+  background-image: url(./images/rank3-2.jpg);
+}
+#sect2 .contentsWrap:nth-child(3) li:nth-child(3) .rankThumBg {
+  background-image: url(./images/rank3-3.jpg);
+}
+#sect2 .contentsWrap:nth-child(4) li:nth-child(1) .rankThumBg {
+  background-image: url(./images/rank4-1.jpg);
+}
+#sect2 .contentsWrap:nth-child(4) li:nth-child(2) .rankThumBg {
+  background-image: url(./images/rank4-2.jpg);
+}
+#sect2 .contentsWrap:nth-child(4) li:nth-child(3) .rankThumBg {
+  background-image: url(./images/rank4-3.jpg);
+}
+#sect2 .contentsWrap:nth-child(5) li:nth-child(1) .rankThumBg {
+  background-image: url(./images/rank5-1.jpg);
+}
+#sect2 .contentsWrap:nth-child(5) li:nth-child(2) .rankThumBg {
+  background-image: url(./images/rank5-2.jpg);
+}
+#sect2 .contentsWrap:nth-child(5) li:nth-child(3) .rankThumBg {
+  background-image: url(./images/rank5-3.jpg);
+}
+
+#sect3 {
+  height: 100%;
+}
+#sect3 .contentsContainer .contentsWrap {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#sect3 .contentsContainer .contentsWrap li {
+  width: 370px;
+  height: 560px;
+}
+#sect3 .contentsContainer .contentsWrap li a .eventThum {
+  height: 258px;
+}
+#sect3 .contentsContainer .contentsWrap li a .eventThum figure {
+  height: 100%;
+}
+#sect3 .contentsContainer .contentsWrap li a .eventThum figure img {
+  width: 100%;
+  height: 100%;
+}
+#sect3 .contentsContainer .contentsWrap li a .eventDesc {
+  flex-direction: column;
+  padding-top: 25px;
+  gap: 1.5rem;
+  margin-bottom: 38px;
+}
+#sect3 .contentsContainer .contentsWrap li a .eventDesc span {
+  display: inline-block;
+  width: 90px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  padding: 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ec7d2c;
+  border: 1px solid #ec7d2c;
+}
+#sect3 .contentsContainer .contentsWrap li a .progressBar {
+  width: 100%;
+  height: 6px;
+  background: #dcdcdc;
+  margin-bottom: 14px;
+  font-size: 0;
+}
+#sect3 .contentsContainer .contentsWrap li a .progressBar span {
+  display: inline-block;
+  width: 60%;
+  height: 6px;
+  background: #ec7d2c;
+}
+#sect3 .contentsContainer .contentsWrap li a .progressBar .done {
+  width: 100%;
+  background: #333;
+}
+#sect3 .contentsContainer .contentsWrap li .count {
+  text-align: right;
+}
+#sect3 .moreBtn {
+  bottom: -50px;
 }
 
 aside {
