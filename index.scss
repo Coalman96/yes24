@@ -172,7 +172,7 @@ a {
   }
   p {
     font-size: 13px;
-    color: #999;
+    color: #fff;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -339,7 +339,7 @@ a {
   }
 }
 #sect3 {
-  height: 100%;
+  height: 2000px;
   .contentsContainer {
     .contentsWrap {
       justify-content: space-between;
@@ -348,6 +348,13 @@ a {
         width: 370px;
         height: 560px;
         a {
+          figure{
+            overflow: hidden;
+          }
+          &:hover img{
+            transform: scale(1.1);
+            transition: 0.5s;
+          }
           .eventThum {
             height: 258px;
             figure {
@@ -355,6 +362,7 @@ a {
               img {
                 width: 100%;
                 height: 100%;
+                transition: 0.5s;
               }
             }
           }
@@ -388,21 +396,17 @@ a {
               height: 6px;
               background: #ec7d2c;
             }
-            .done{
+            .done {
               width: 100%;
               background: #333;
             }
           }
-
         }
         .count {
           text-align: right;
         }
       }
     }
-  }
-  .moreBtn{
-    bottom: -50px;
   }
 }
 aside {
