@@ -148,22 +148,26 @@ a {
 }
 
 #sect2,
-#sect3 {
+#sect3,
+#sect4 {
   position: relative;
   width: 1200px;
   margin: 0 auto;
 }
 #sect2 .contentsWrap,
-#sect3 .contentsWrap {
+#sect3 .contentsWrap,
+#sect4 .contentsWrap {
   display: none;
   padding-top: 50px;
 }
 #sect2 .contentsWrap.on,
-#sect3 .contentsWrap.on {
+#sect3 .contentsWrap.on,
+#sect4 .contentsWrap.on {
   display: flex;
 }
 #sect2 b,
-#sect3 b {
+#sect3 b,
+#sect4 b {
   line-height: 16px;
   font-size: 15px;
   color: #333;
@@ -173,19 +177,22 @@ a {
   text-overflow: ellipsis;
 }
 #sect2 p,
-#sect3 p {
+#sect3 p,
+#sect4 p {
   font-size: 13px;
-  color: #fff;
+  color: #999;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 #sect2 a,
-#sect3 a {
+#sect3 a,
+#sect4 a {
   display: block;
 }
 #sect2 h2,
-#sect3 h2 {
+#sect3 h2,
+#sect4 h2 {
   font-size: 35px;
   color: #333;
   text-align: center;
@@ -194,25 +201,29 @@ a {
   line-height: 155px;
 }
 #sect2 .tabs,
-#sect3 .tabs {
+#sect3 .tabs,
+#sect4 .tabs {
   text-align: center;
   font-size: 18px;
   width: 500px;
   margin: 0 auto;
 }
 #sect2 .tabs li,
-#sect3 .tabs li {
+#sect3 .tabs li,
+#sect4 .tabs li {
   flex: 1;
 }
 #sect2 .moreBtn,
-#sect3 .moreBtn {
+#sect3 .moreBtn,
+#sect4 .moreBtn {
   position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
 }
 #sect2 .moreBtn a,
-#sect3 .moreBtn a {
+#sect3 .moreBtn a,
+#sect4 .moreBtn a {
   display: block;
   width: 220px;
   height: 48px;
@@ -285,9 +296,11 @@ a {
   height: 45px;
   line-height: 45px;
   font-size: 16px;
-  color: #fff;
   text-align: center;
   background: #ec7d2c;
+}
+#sect2 .contentsWrap li a .rankNum p {
+  color: #fff;
 }
 #sect2 .contentsWrap:nth-child(1) li:nth-child(1) .rankThumBg {
   background-image: url(./images/rank1-1.jpg);
@@ -401,6 +414,195 @@ a {
 }
 #sect3 .contentsContainer .contentsWrap li .count {
   text-align: right;
+}
+
+#sect4 {
+  width: 100%;
+  overflow: hidden;
+}
+#sect4 .slidePos {
+  width: 840px;
+  height: 535px;
+  margin: 0 auto;
+  position: relative;
+}
+#sect4 .slidePos .slideContainer {
+  width: 2640px;
+  height: 442px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+#sect4 .slidePos .slideContainer .mySwiper1 {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper .swiper-slide {
+  position: relative;
+  height: 100%;
+  position: relative;
+  width: 840px;
+  margin-right: 60px;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper .swiper-slide .textWrap {
+  width: 839px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.58);
+  opacity: 0;
+  transition: all 0.5s;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper .swiper-slide .textWrap p {
+  font-size: 21px;
+  padding: 0 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 91px;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper .swiper-slide .textWrap i {
+  height: 52px;
+  font-style: normal;
+  line-height: 57px;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 18px;
+  background: #ec7d2c;
+  position: absolute;
+  left: 32px;
+  top: -17px;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper .swiper-slide.swiper-slide-next .dim {
+  display: none;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper .swiper-slide.swiper-slide-next .textWrap {
+  opacity: 1;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper .swiper-slide .dim {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper .swiper-slide figure {
+  display: block;
+  overflow: hidden;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-wrapper .swiper-slide figure img {
+  display: block;
+  width: 840px;
+  height: 440px;
+  transition: all 0.3s;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-button-next {
+  left: 70%;
+}
+#sect4 .slidePos .slideContainer .mySwiper1 .swiper-button-prev {
+  left: 30%;
+}
+
+#sect5 article {
+  position: relative;
+  display: flex;
+  width: 1000px;
+  height: 120px;
+  margin: 0 auto 60px;
+}
+#sect5 article .infoWrap {
+  width: 100%;
+  gap: 60px;
+  align-items: center;
+}
+#sect5 article .infoWrap li:nth-child(1) figure {
+  margin-bottom: 10px;
+}
+#sect5 article .infoWrap li:nth-child(2) {
+  flex: 2;
+  font-size: 15px;
+  text-align: center;
+}
+#sect5 article .infoWrap li:nth-child(2) ul {
+  justify-content: space-between;
+}
+#sect5 article .infoWrap li:nth-child(2) ul li {
+  cursor: pointer;
+  width: 25%;
+}
+#sect5 article .infoWrap li:nth-child(3) {
+  align-items: center;
+}
+#sect5 article .infoWrap li .shortCuts .snsWrap {
+  margin-bottom: 20px;
+}
+#sect5 article .infoWrap li .shortCuts .snsWrap figure {
+  margin-right: 24px;
+}
+#sect5 article .infoWrap li figure {
+  display: inline-block;
+}
+#sect5 article .infoWrap li p {
+  font-size: 13px;
+  color: #333;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+}
+#sect5 article .infoWrap li p span {
+  color: #999;
+}
+
+footer {
+  width: 100%;
+  min-width: 1300px;
+  border-top: 1px solid #ddd;
+  padding-bottom: 25px;
+  font-size: 15px;
+  color: #333;
+}
+footer div {
+  width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+footer .footerMenu {
+  height: 70px;
+  text-align: center;
+  justify-content: space-between;
+}
+footer .footerMenu ul {
+  gap: 25px;
+}
+footer .footerMenu #family {
+  border: 1px solid #999;
+  padding: 5px;
+}
+footer .footerMenu #family option[value=""][disabled] {
+  display: none;
+}
+footer .contactWrap {
+  gap: 90px;
+}
+footer .contactWrap p {
+  color: #999;
+  font-size: 13px;
+}
+footer .contactWrap p b {
+  color: #333;
 }
 
 aside {
