@@ -68,6 +68,10 @@ header.fixed {
 header.fixed .headerLeft .hambergerWrap span {
   background-color: #000;
 }
+header.fixed .headerRight .gnb li input {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
 header div {
   display: flex;
   align-items: center;
