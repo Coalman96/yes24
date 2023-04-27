@@ -311,6 +311,7 @@ header {
 #sect4 {
   position: relative;
   width: 1200px;
+  height: 100%;
   margin: 0 auto;
   .contentsWrap {
     display: none;
@@ -500,11 +501,11 @@ header {
   }
 }
 #sect3 {
-  height: 2000px;
   .contentsContainer {
     .contentsWrap {
       justify-content: space-between;
       flex-wrap: wrap;
+      display: flex!important;
       li {
         width: 370px;
         height: 560px;
@@ -565,6 +566,12 @@ header {
         }
         .count {
           text-align: right;
+        }
+      }
+      .contents{
+        display: none;
+        &.on{
+          display: block;
         }
       }
     }

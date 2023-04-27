@@ -294,6 +294,7 @@ header .headerRight .gnb li input {
 #sect4 {
   position: relative;
   width: 1200px;
+  height: 100%;
   margin: 0 auto;
 }
 #sect2 .contentsWrap,
@@ -490,12 +491,10 @@ header .headerRight .gnb li input {
   background-image: url(./images/rank5-3.jpg);
 }
 
-#sect3 {
-  height: 2000px;
-}
 #sect3 .contentsContainer .contentsWrap {
   justify-content: space-between;
   flex-wrap: wrap;
+  display: flex !important;
 }
 #sect3 .contentsContainer .contentsWrap li {
   width: 370px;
@@ -556,6 +555,12 @@ header .headerRight .gnb li input {
 }
 #sect3 .contentsContainer .contentsWrap li .count {
   text-align: right;
+}
+#sect3 .contentsContainer .contentsWrap .contents {
+  display: none;
+}
+#sect3 .contentsContainer .contentsWrap .contents.on {
+  display: block;
 }
 
 #sect4 {
