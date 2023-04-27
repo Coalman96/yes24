@@ -46,6 +46,153 @@ a {
   object-fit: cover;
   -webkit-user-drag: none;
 }
+//header area
+header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  min-width: 1300px;
+  z-index: 999;
+  padding: 0px 30px 0px;
+  color: #fff;
+  &.fixed {
+    position: fixed;
+    background-color: #fff;
+    color: #000;
+    .headerLeft {
+      .hambergerWrap {
+        span {
+          background-color: #000;
+        }
+      }
+    }
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  .headerLeft {
+    width: 10%;
+    gap: 20px;
+    h1 {
+      width: 90px;
+      height: 35px;
+      a {
+        display: block;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .hambergerWrap {
+      display: block;
+      width: 22px;
+      height: 16px;
+      &:hover span:nth-child(1) {
+        width: 15px;
+      }
+      &:hover span:nth-child(3) {
+        width: 25px;
+      }
+      span {
+        display: block;
+        height: 3px;
+        background: #fff;
+        transition: 0.3s;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:nth-child(1) {
+          width: 25px;
+        }
+        &:nth-child(2) {
+          width: 20px;
+        }
+        &:nth-child(3) {
+          width: 15px;
+        }
+      }
+    }
+  }
+  .headerCenter {
+    width: 60%;
+    padding-right: 63px;
+    font-size: 18px;
+    ul {
+      display: flex;
+      width: 100%;
+      justify-content: right;
+      gap: 26px;
+      li {
+        position: relative;
+        &:hover:after {
+          width: 100%;
+          transition: 0.3s;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 3px;
+          bottom: -3px;
+          width: 0%;
+          height: 3px;
+          background-color: #e2782a;
+          z-index: 999;
+        }
+      }
+    }
+  }
+  .headerRight {
+    width: 30%;
+    font-size: 14px;
+    ul {
+      flex: 1;
+    }
+    .link {
+      li {
+        gap: 10px;
+        a {
+          display: block;
+          width: 60px;
+          position: relative;
+          text-align: center;
+          &::before {
+            content: "";
+            display: block;
+            width: 3px;
+            height: 3px;
+            background: #ec7d2c;
+            position: absolute;
+            top: 10px;
+            left: 0;
+          }
+        }
+      }
+    }
+    .gnb {
+      font-size: 20px;
+      gap: 15px;
+
+      li {
+        i{
+          font-weight: 800;
+        }
+        input {
+          background-color: transparent;
+          border: none;
+          border-bottom: 2px solid #fff;
+          outline: none;
+          color: #fff;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
 // sec1Swiper
 #sec1Swiper {
   width: (1300px 100%);
@@ -277,7 +424,7 @@ a {
           font-size: 16px;
           text-align: center;
           background: #ec7d2c;
-          p{
+          p {
             color: #fff;
           }
         }

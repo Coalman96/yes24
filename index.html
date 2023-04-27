@@ -11,8 +11,47 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
+    <header>
+      <div class="headerLeft">
+        <a href="#x" class="hambergerWrap">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <h1>
+          <a href="#x">
+            <img src="./images/header-logoN-w.png" alt="헤더로고">
+          </a>
+        </h1>
+      </div>
+      <div class="headerCenter">
+        <ul>
+          <li><a href="#x">콘서트</a></li>
+          <li><a href="#x">뮤지컬</a></li>
+          <li><a href="#x">연극</a></li>
+          <li><a href="#x">클래식</a></li>
+          <li><a href="#x">전시</a></li>
+          <li><a href="#x">이동</a></li>
+        </ul>
+      </div>
+      <div class="headerRight">
+        <ul class="link flex">
+          <li><a href="#x">MD#</a></li>
+          <li><a href="#x">지역</a></li>
+          <li><a href="#x">랭킹</a></li>
+          <li><a href="#x">이벤트</a></li>
+        </ul>
+        <ul class="gnb flex">
+          <li><input type="search"></li>
+          <li><a href="#x"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <li><a href="#x"><i class="fa-solid fa-user"></i></a></li>
+          <li><a href="#x"><i class="fa-sharp fa-regular fa-globe"></i></a></li>
+        </ul>
+      </div>
+    </header>
     <section id="sect1">
       <div class="swiper mySwiper" id="sec1Swiper">
         <div class="swiper-wrapper">
@@ -1278,6 +1317,23 @@
       });
     </script>
     <script>
+      //header fixed
+      const header = document.querySelector('header')
+      const sect1 = document.querySelector('#sect1')
+      const logo = document.querySelector('.headerLeft img')
+      const defaultSrc = logo.getAttribute('src')
+      const changeSrc = logo.getAttribute('src').replace('-w', '-B')
+      window.addEventListener('scroll', () => {
+        const sect1Height = sect1.offsetHeight
+        if(this.scrollY>=sect1Height){
+          header.classList.add('fixed')
+          logo.setAttribute('src', changeSrc)
+        }else if(this.scrollY<sect1Height){
+          header.classList.remove('fixed')
+          logo.setAttribute('src', defaultSrc)
+        }
+      })
+      console.log(header)
       //slideThum slideUp
       const slideThum = document.querySelector(".slideThum");
       const scrollWrap = document.querySelector(".swiper-scrollbar");
